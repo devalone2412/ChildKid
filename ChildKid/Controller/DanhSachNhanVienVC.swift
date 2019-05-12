@@ -9,7 +9,7 @@
 import UIKit
 import SWRevealViewController
 
-class AdminVC: UIViewController {
+class DanhSachNhanVienVC: UIViewController {
     
     @IBOutlet weak var searchNV: UISearchBar!
     @IBOutlet weak var nhanVienTableView: UITableView!
@@ -26,7 +26,7 @@ class AdminVC: UIViewController {
     }
 }
 
-extension AdminVC: UITableViewDelegate, UITableViewDataSource {
+extension DanhSachNhanVienVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }

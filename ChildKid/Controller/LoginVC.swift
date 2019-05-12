@@ -26,4 +26,11 @@ class LoginVC: UIViewController {
         view.endEditing(true)
     }
 
+    @IBAction func dangNhapWasPressed(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let danhSachNhanVienVC = storyboard.instantiateViewController(withIdentifier: "dsNhanVien") as! DanhSachNhanVienVC
+        let nav = UINavigationController(rootViewController: danhSachNhanVienVC)
+        let revealController = self.revealViewController()
+        revealController?.pushFrontViewController(nav, animated: true)
+    }
 }

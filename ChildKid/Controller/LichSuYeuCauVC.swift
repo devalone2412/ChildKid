@@ -30,7 +30,7 @@ extension LichSuYeuCauVC: UITableViewDelegate, UITableViewDataSource {
         let cell = lichSuYeuCauTableView.dequeueReusableCell(withIdentifier: "lichSuYeuCauCell", for: indexPath) as? YeuCauCell
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
-        cell?.configure(tenPH: "Nguyễn Huy Hoàng", tenTre: "Lục Thới Sang", ngayDat: dateFormatter.string(from: Date()))
+        cell?.configure(tenPH: "Nguyễn Huy Hoàng", tenTre: "Nguyễn Huy Hoang1", "Nguyễn Huy Hoang2", ngayDat: dateFormatter.string(from: Date()))
         return cell ?? UITableViewCell()
     }
     

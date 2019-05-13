@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sp1-DC-Cn8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -93,6 +93,105 @@
             </objects>
             <point key="canvasLocation" x="766" y="601"/>
         </scene>
+        <!--Ghi chú-->
+        <scene sceneID="k6b-f2-R1B">
+            <objects>
+                <viewController id="mHF-DA-cZc" customClass="GhiChuVC" customModule="ChildKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w2r-BN-R8o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zb-Ub-uNR">
+                                <rect key="frame" x="128" y="74" width="119" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q2X-94-HqI">
+                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ghiChuCell" rowHeight="100" id="3Uy-j8-bnl" customClass="GhiChuCell" customModule="ChildKid" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Uy-j8-bnl" id="vwo-tZ-3F6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-default" translatesAutoresizingMaskIntoConstraints="NO" id="GfA-Zy-dVd" customClass="BorderImageView" customModule="ChildKid" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="10.5" width="80" height="78.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="85M-fI-4ru"/>
+                                                        <constraint firstAttribute="height" constant="78.5" id="rto-qF-Idy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-cI-4TK">
+                                                    <rect key="frame" x="103" y="0.0" width="272" height="39.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Huy Hoàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvv-e8-5cw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="272" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="tLt-gl-Cv6"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lớp: Chồi 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESY-DU-jTb">
+                                                            <rect key="frame" x="0.0" y="20" width="272" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ghi chú: flahoqgwflanhlfglqbfahfouqbflnalfalsbfklabs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s80-7T-Sag">
+                                                    <rect key="frame" x="103" y="39.5" width="272" height="57.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VHf-cI-4TK" firstAttribute="leading" secondItem="GfA-Zy-dVd" secondAttribute="trailing" constant="8" id="5JB-OI-Jyw"/>
+                                                <constraint firstItem="s80-7T-Sag" firstAttribute="leading" secondItem="GfA-Zy-dVd" secondAttribute="trailing" constant="8" id="5vT-od-6X1"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GfA-Zy-dVd" secondAttribute="bottom" constant="10.5" id="Eg1-o6-2yv"/>
+                                                <constraint firstAttribute="trailing" secondItem="s80-7T-Sag" secondAttribute="trailing" id="Fzn-C5-OTg"/>
+                                                <constraint firstItem="VHf-cI-4TK" firstAttribute="top" secondItem="vwo-tZ-3F6" secondAttribute="top" id="NTM-iP-anz"/>
+                                                <constraint firstAttribute="trailing" secondItem="VHf-cI-4TK" secondAttribute="trailing" id="mna-Om-ixr"/>
+                                                <constraint firstItem="s80-7T-Sag" firstAttribute="top" secondItem="VHf-cI-4TK" secondAttribute="bottom" id="pk8-eg-5tA"/>
+                                                <constraint firstItem="GfA-Zy-dVd" firstAttribute="leading" secondItem="vwo-tZ-3F6" secondAttribute="leading" constant="15" id="q0I-za-rfc"/>
+                                                <constraint firstItem="GfA-Zy-dVd" firstAttribute="centerY" secondItem="vwo-tZ-3F6" secondAttribute="centerY" id="qpq-LB-RpM"/>
+                                                <constraint firstAttribute="bottom" secondItem="s80-7T-Sag" secondAttribute="bottom" constant="2.5" id="yy1-AM-fIP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="anhTre" destination="GfA-Zy-dVd" id="Vzd-m0-XXk"/>
+                                            <outlet property="ghiChu" destination="s80-7T-Sag" id="b6j-0E-waz"/>
+                                            <outlet property="lop" destination="ESY-DU-jTb" id="ajZ-5m-Rxv"/>
+                                            <outlet property="tenTre" destination="jvv-e8-5cw" id="ybs-te-VfK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Zb-Ub-uNR" firstAttribute="top" secondItem="3Co-HT-NRd" secondAttribute="top" constant="10" id="FKt-A8-z2u"/>
+                            <constraint firstItem="4Zb-Ub-uNR" firstAttribute="centerX" secondItem="w2r-BN-R8o" secondAttribute="centerX" id="bKg-rh-2P6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Co-HT-NRd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ghi chú" id="FM8-vU-5Sq"/>
+                    <connections>
+                        <outlet property="ghiChuTableView" destination="Q2X-94-HqI" id="as1-kY-UhH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RvF-UU-SLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679.2" y="1305.697151424288"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -151,6 +250,9 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wp-rf-wMW">
                                         <rect key="frame" x="0.0" y="381" width="100" height="100"/>
                                         <state key="normal" image="thongke"/>
+                                        <connections>
+                                            <segue destination="57F-ci-lDZ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="jeS-Bh-W1t"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1138,6 +1240,122 @@
             </objects>
             <point key="canvasLocation" x="1677.5999999999999" y="-161.46926536731635"/>
         </scene>
+        <!--Thống kê-->
+        <scene sceneID="X0M-os-2sa">
+            <objects>
+                <viewController id="9yj-bw-EQL" customClass="ThongKeVC" customModule="ChildKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sdr-Qi-d8E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ye-Ov-e4b" customClass="BorderView" customModule="ChildKid" customModuleProvider="target">
+                                <rect key="frame" x="16" y="132" width="343" height="449"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-mN-jP2">
+                                        <rect key="frame" x="8" y="8" width="328.5" height="49"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ubP-gN-D0B">
+                                                <rect key="frame" x="0.0" y="0.0" width="328.5" height="23.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chi phí món ăn tháng 12:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHB-JG-vQu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20,000,000 VNĐ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yiq-Ve-mB7">
+                                                        <rect key="frame" x="213" y="0.0" width="115.5" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="98" translatesAutoresizingMaskIntoConstraints="NO" id="SWk-DY-pgF">
+                                                <rect key="frame" x="0.0" y="25.5" width="328.5" height="23.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chi phí đặt tiệc:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bI-aF-Shn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,000,000 VNĐ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iea-oq-rhP">
+                                                        <rect key="frame" x="222" y="0.0" width="106.5" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="AXl-M4-6LQ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Z58-mN-jP2" firstAttribute="top" secondItem="0Ye-Ov-e4b" secondAttribute="top" constant="8" id="XPk-NZ-AoD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z58-mN-jP2" secondAttribute="trailing" constant="6.5" id="YNX-Jd-wrb"/>
+                                    <constraint firstItem="Z58-mN-jP2" firstAttribute="leading" secondItem="0Ye-Ov-e4b" secondAttribute="leading" constant="8" id="vbm-aH-gLq"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qxn-me-y70">
+                                <rect key="frame" x="89.5" y="84" width="196.5" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn tháng:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUk-lD-aiC">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12/2019" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Va0-Gk-26F">
+                                        <rect key="frame" x="106.5" y="0.0" width="90" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="aSR-fW-ppr"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XKr-q1-rY0"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gk9-ry-WTU" customClass="BorderButton" customModule="ChildKid" customModuleProvider="target">
+                                <rect key="frame" x="50.5" y="597" width="274" height="50"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NMm-0k-g4Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Xuất báo cáo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gk9-ry-WTU" firstAttribute="top" secondItem="0Ye-Ov-e4b" secondAttribute="bottom" constant="16" id="5od-HY-8Ki"/>
+                            <constraint firstItem="0Ye-Ov-e4b" firstAttribute="leading" secondItem="kBR-yv-GWZ" secondAttribute="leading" constant="16" id="CXT-Oy-nng"/>
+                            <constraint firstItem="qxn-me-y70" firstAttribute="centerX" secondItem="sdr-Qi-d8E" secondAttribute="centerX" id="G98-Au-MTd"/>
+                            <constraint firstItem="gk9-ry-WTU" firstAttribute="width" secondItem="0Ye-Ov-e4b" secondAttribute="width" multiplier="0.8" id="M3V-mR-7PS"/>
+                            <constraint firstItem="0Ye-Ov-e4b" firstAttribute="top" secondItem="qxn-me-y70" secondAttribute="bottom" constant="18" id="VKt-n5-h7f"/>
+                            <constraint firstItem="qxn-me-y70" firstAttribute="top" secondItem="kBR-yv-GWZ" secondAttribute="top" constant="20" id="hRj-7S-6Kf"/>
+                            <constraint firstAttribute="bottom" secondItem="gk9-ry-WTU" secondAttribute="bottom" constant="20" symbolic="YES" id="lTs-Wz-cCY"/>
+                            <constraint firstItem="kBR-yv-GWZ" firstAttribute="trailing" secondItem="0Ye-Ov-e4b" secondAttribute="trailing" constant="16" id="qMV-ty-6HH"/>
+                            <constraint firstItem="gk9-ry-WTU" firstAttribute="centerX" secondItem="0Ye-Ov-e4b" secondAttribute="centerX" id="zhf-Kw-ZqM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kBR-yv-GWZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Thống kê" id="oS7-hZ-VaY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Hr-z6-giv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2621.5999999999999" y="-1658.3208395802101"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xxR-xy-VAH">
             <objects>
@@ -1155,6 +1373,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3P-sk-Nvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1680.8" y="-897.30134932533736"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tUh-NA-Scp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="57F-ci-lDZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gaJ-rT-Xys">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9yj-bw-EQL" kind="relationship" relationship="rootViewController" id="efh-al-sda"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjx-PY-0BB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682.4000000000001" y="-1658.3208395802101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rsG-GF-nmU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sp1-DC-Cn8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yju-dx-0CR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mHF-DA-cZc" kind="relationship" relationship="rootViewController" id="uHA-nO-Idh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ljf-2K-kP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="1305.697151424288"/>
         </scene>
     </scenes>
     <resources>

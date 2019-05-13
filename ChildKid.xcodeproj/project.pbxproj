@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		259172A7228883180024F965 /* LichSuYeuCauVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259172A6228883180024F965 /* LichSuYeuCauVC.swift */; };
+		25D9779C2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9779B2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift */; };
+		25D9779E2289C9FD00272893 /* MenuDatTiecCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9779D2289C9FD00272893 /* MenuDatTiecCell.swift */; };
 		25FE0414228868E60071ADCF /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE0413228868E60071ADCF /* BorderImageView.swift */; };
 		25FE0416228869E50071ADCF /* ThemNhanVienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE0415228869E50071ADCF /* ThemNhanVienVC.swift */; };
 		25FE041822886BD80071ADCF /* YeuCauDatTiecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE041722886BD80071ADCF /* YeuCauDatTiecVC.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		259172A6228883180024F965 /* LichSuYeuCauVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LichSuYeuCauVC.swift; sourceTree = "<group>"; };
+		25D9779B2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietYeuCauDatTiecVC.swift; sourceTree = "<group>"; };
+		25D9779D2289C9FD00272893 /* MenuDatTiecCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDatTiecCell.swift; sourceTree = "<group>"; };
 		25FE0413228868E60071ADCF /* BorderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
 		25FE0415228869E50071ADCF /* ThemNhanVienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemNhanVienVC.swift; sourceTree = "<group>"; };
 		25FE041722886BD80071ADCF /* YeuCauDatTiecVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuCauDatTiecVC.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				25FE0415228869E50071ADCF /* ThemNhanVienVC.swift */,
 				25FE041722886BD80071ADCF /* YeuCauDatTiecVC.swift */,
 				259172A6228883180024F965 /* LichSuYeuCauVC.swift */,
+				25D9779B2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			children = (
 				3DD87D2C22847CC300354478 /* NhanVienCell.swift */,
 				25FE0419228870FE0071ADCF /* YeuCauCell.swift */,
+				25D9779D2289C9FD00272893 /* MenuDatTiecCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -275,9 +281,11 @@
 				3DF3DE3A22844DEC00A21415 /* DanhSachNhanVienVC.swift in Sources */,
 				3DD87D22228455D800354478 /* BorderView.swift in Sources */,
 				25FE041822886BD80071ADCF /* YeuCauDatTiecVC.swift in Sources */,
+				25D9779E2289C9FD00272893 /* MenuDatTiecCell.swift in Sources */,
 				3DF3DE3822844DEC00A21415 /* AppDelegate.swift in Sources */,
 				25FE041A228870FE0071ADCF /* YeuCauCell.swift in Sources */,
 				25FE0414228868E60071ADCF /* BorderImageView.swift in Sources */,
+				25D9779C2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift in Sources */,
 				3DD87D2422845B1300354478 /* BorderButton.swift in Sources */,
 				3DD87D202284510900354478 /* LoginVC.swift in Sources */,
 				3DD87D2A22846E4900354478 /* MenuVC.swift in Sources */,

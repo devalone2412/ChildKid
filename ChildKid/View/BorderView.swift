@@ -9,7 +9,7 @@
 import UIKit
 
 class BorderView: UIView {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -17,5 +17,5 @@ class BorderView: UIView {
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 1
     }
-
+    
 }

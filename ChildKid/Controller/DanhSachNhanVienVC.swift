@@ -19,7 +19,7 @@ class DanhSachNhanVienVC: UIViewController {
         
         //        Open.target = self.revealViewController()
         //        Open.action = #selector(SWRevealViewController.revealToggle(_:))
-    self.view.addGestureRecognizer((self.revealViewController()?.panGestureRecognizer())!)
+        self.view.addGestureRecognizer((self.revealViewController()?.panGestureRecognizer())!)
         nhanVienTableView.delegate = self
         nhanVienTableView.dataSource = self
         nhanVienTableView.showsVerticalScrollIndicator = false

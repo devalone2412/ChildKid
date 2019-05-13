@@ -9,7 +9,7 @@
 import UIKit
 
 class NhanVienCell: UITableViewCell {
-
+    
     @IBOutlet weak var imageNhanVien: UIImageView!
     @IBOutlet weak var nameNhanVien: UILabel!
     @IBOutlet weak var chucVuNhanVien: UILabel!
@@ -26,11 +26,5 @@ class NhanVienCell: UITableViewCell {
         self.chucVuNhanVien.text = "Chức vụ: \(chucVu)"
         self.quyenNhanVien.text = "Quyền: \(quyen)"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }

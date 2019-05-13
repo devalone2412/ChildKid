@@ -9,11 +9,11 @@
 import UIKit
 
 class BorderImageView: UIImageView {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.layer.cornerRadius = 10
     }
-
+    
 }

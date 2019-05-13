@@ -9,17 +9,17 @@
 import UIKit
 
 class YeuCauDatTiecVC: UIViewController {
-
+    
     @IBOutlet weak var yeuCauTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.addGestureRecognizer((self.revealViewController()?.panGestureRecognizer())!)
         yeuCauTableView.delegate = self
         yeuCauTableView.dataSource = self
         yeuCauTableView.showsVerticalScrollIndicator = false
     }
-
+    
 }
 
 extension YeuCauDatTiecVC: UITableViewDelegate, UITableViewDataSource {
@@ -57,5 +57,10 @@ extension YeuCauDatTiecVC: UITableViewDelegate, UITableViewDataSource {
         }
         disapprove.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.2980392157, blue: 0.2352941176, alpha: 1)
         return disapprove
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chiTietYeuCauDatTiecVC = storyboard?.instantiateViewController(withIdentifier: "chitietyeucau") as? ChiTietYeuCauDatTiecVC
+        navigationController?.pushViewController(chiTietYeuCauDatTiecVC!, animated: true)
     }
 }

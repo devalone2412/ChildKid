@@ -9,10 +9,10 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupGenerals()
     }
     
@@ -25,7 +25,7 @@ class LoginVC: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-
+    
     @IBAction func dangNhapWasPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let danhSachNhanVienVC = storyboard.instantiateViewController(withIdentifier: "dsNhanVien") as! DanhSachNhanVienVC

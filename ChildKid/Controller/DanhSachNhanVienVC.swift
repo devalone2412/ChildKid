@@ -23,6 +23,14 @@ class DanhSachNhanVienVC: UIViewController {
         nhanVienTableView.delegate = self
         nhanVienTableView.dataSource = self
         nhanVienTableView.showsVerticalScrollIndicator = false
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
 }
 
@@ -37,6 +45,8 @@ extension DanhSachNhanVienVC: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Đã click!")
+    }
 }
 

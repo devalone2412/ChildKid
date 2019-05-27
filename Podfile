@@ -7,5 +7,8 @@ target 'ChildKid' do
 
   # Pods for ChildKid
 pod 'SWRevealViewController', '~> 2.3'
+pod 'Toast-Swift', '~> 4.0.0'
 pod 'Firebase/Core'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
 end

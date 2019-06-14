@@ -17,17 +17,25 @@
 		25FE0414228868E60071ADCF /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE0413228868E60071ADCF /* BorderImageView.swift */; };
 		25FE0416228869E50071ADCF /* ThemNhanVienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE0415228869E50071ADCF /* ThemNhanVienVC.swift */; };
 		25FE041822886BD80071ADCF /* YeuCauDatTiecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE041722886BD80071ADCF /* YeuCauDatTiecVC.swift */; };
-		25FE041A228870FE0071ADCF /* YeuCauCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE0419228870FE0071ADCF /* YeuCauCell.swift */; };
+		25FE041A228870FE0071ADCF /* YeuCauPHCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE0419228870FE0071ADCF /* YeuCauPHCell.swift */; };
 		3D0A0BFD229B848D00FB3AFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A0BFC229B848C00FB3AFC /* GoogleService-Info.plist */; };
 		3D0A0C00229B911400FB3AFC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A0BFF229B911400FB3AFC /* AuthService.swift */; };
-		3D0A0C02229B91A400FB3AFC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A0C01229B91A400FB3AFC /* User.swift */; };
+		3D0A0C02229B91A400FB3AFC /* Empl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A0C01229B91A400FB3AFC /* Empl.swift */; };
+		3D181CAA22A0C25C009A8422 /* PhuHuynh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D181CA922A0C25C009A8422 /* PhuHuynh.swift */; };
+		3D181CAC22A0C654009A8422 /* PhuHuynhCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D181CAB22A0C654009A8422 /* PhuHuynhCell.swift */; };
+		3D2C4E1822A3B36D00AF6D57 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2C4E1722A3B36D00AF6D57 /* iOSDropDown.framework */; };
+		3DAC421822B22D56009D293F /* YeuCauGVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC421722B22D56009D293F /* YeuCauGVCell.swift */; };
+		3DAC421A22B2310D009D293F /* YeuCauPH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC421922B2310D009D293F /* YeuCauPH.swift */; };
+		3DAC421E22B238C5009D293F /* MonAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC421D22B238C5009D293F /* MonAn.swift */; };
+		3DAC422022B25198009D293F /* YeuCauGV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC421F22B25198009D293F /* YeuCauGV.swift */; };
+		3DB33CC922A21CB000470451 /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB33CC822A21CB000470451 /* DatabaseConfig.swift */; };
 		3DD87D202284510900354478 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD87D1F2284510900354478 /* LoginVC.swift */; };
 		3DD87D22228455D800354478 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD87D21228455D800354478 /* BorderView.swift */; };
 		3DD87D2422845B1300354478 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD87D2322845B1300354478 /* BorderButton.swift */; };
 		3DD87D2A22846E4900354478 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD87D2922846E4900354478 /* MenuVC.swift */; };
 		3DD87D2D22847CC300354478 /* NhanVienCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD87D2C22847CC300354478 /* NhanVienCell.swift */; };
 		3DF3DE3822844DEC00A21415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3DE3722844DEC00A21415 /* AppDelegate.swift */; };
-		3DF3DE3A22844DEC00A21415 /* DanhSachNhanVienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3DE3922844DEC00A21415 /* DanhSachNhanVienVC.swift */; };
+		3DF3DE3A22844DEC00A21415 /* DanhSachUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3DE3922844DEC00A21415 /* DanhSachUserVC.swift */; };
 		3DF3DE3D22844DEC00A21415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3DE3B22844DEC00A21415 /* Main.storyboard */; };
 		3DF3DE3F22844DEE00A21415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3DE3E22844DEE00A21415 /* Assets.xcassets */; };
 		3DF3DE4222844DEE00A21415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3DE4022844DEE00A21415 /* LaunchScreen.storyboard */; };
@@ -45,10 +53,18 @@
 		25FE0413228868E60071ADCF /* BorderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
 		25FE0415228869E50071ADCF /* ThemNhanVienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemNhanVienVC.swift; sourceTree = "<group>"; };
 		25FE041722886BD80071ADCF /* YeuCauDatTiecVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuCauDatTiecVC.swift; sourceTree = "<group>"; };
-		25FE0419228870FE0071ADCF /* YeuCauCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuCauCell.swift; sourceTree = "<group>"; };
+		25FE0419228870FE0071ADCF /* YeuCauPHCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuCauPHCell.swift; sourceTree = "<group>"; };
 		3D0A0BFC229B848C00FB3AFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D0A0BFF229B911400FB3AFC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		3D0A0C01229B91A400FB3AFC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ChildKid/Services/User.swift; sourceTree = SOURCE_ROOT; };
+		3D0A0C01229B91A400FB3AFC /* Empl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Empl.swift; path = ChildKid/Services/Empl.swift; sourceTree = SOURCE_ROOT; };
+		3D181CA922A0C25C009A8422 /* PhuHuynh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhuHuynh.swift; path = ChildKid/PhuHuynh.swift; sourceTree = SOURCE_ROOT; };
+		3D181CAB22A0C654009A8422 /* PhuHuynhCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhuHuynhCell.swift; sourceTree = "<group>"; };
+		3D2C4E1722A3B36D00AF6D57 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAC421722B22D56009D293F /* YeuCauGVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuCauGVCell.swift; sourceTree = "<group>"; };
+		3DAC421922B2310D009D293F /* YeuCauPH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YeuCauPH.swift; path = ChildKid/View/YeuCauPH.swift; sourceTree = SOURCE_ROOT; };
+		3DAC421D22B238C5009D293F /* MonAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonAn.swift; sourceTree = "<group>"; };
+		3DAC421F22B25198009D293F /* YeuCauGV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuCauGV.swift; sourceTree = "<group>"; };
+		3DB33CC822A21CB000470451 /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
 		3DD87D1F2284510900354478 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3DD87D21228455D800354478 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		3DD87D2322845B1300354478 /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
@@ -56,7 +72,7 @@
 		3DD87D2C22847CC300354478 /* NhanVienCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhanVienCell.swift; sourceTree = "<group>"; };
 		3DF3DE3422844DEC00A21415 /* ChildKid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChildKid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF3DE3722844DEC00A21415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DF3DE3922844DEC00A21415 /* DanhSachNhanVienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanhSachNhanVienVC.swift; sourceTree = "<group>"; };
+		3DF3DE3922844DEC00A21415 /* DanhSachUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanhSachUserVC.swift; sourceTree = "<group>"; };
 		3DF3DE3C22844DEC00A21415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DF3DE3E22844DEE00A21415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF3DE4122844DEE00A21415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2C4E1822A3B36D00AF6D57 /* iOSDropDown.framework in Frameworks */,
 				C9965B9CB23ECA1C0F9DDC33 /* Pods_ChildKid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +107,7 @@
 		350B346B3C3B047BAC448BD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D2C4E1722A3B36D00AF6D57 /* iOSDropDown.framework */,
 				EC54C29D63A1FCB5F1FE7852 /* Pods_ChildKid.framework */,
 			);
 			name = Frameworks;
@@ -113,10 +131,18 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		3DB33CC722A21C5200470451 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				3DB33CC822A21CB000470451 /* DatabaseConfig.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		3DD87D1C2284502400354478 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3DF3DE3922844DEC00A21415 /* DanhSachNhanVienVC.swift */,
+				3DF3DE3922844DEC00A21415 /* DanhSachUserVC.swift */,
 				3DD87D1F2284510900354478 /* LoginVC.swift */,
 				3DD87D2922846E4900354478 /* MenuVC.swift */,
 				25FE0415228869E50071ADCF /* ThemNhanVienVC.swift */,
@@ -134,9 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				3DD87D2C22847CC300354478 /* NhanVienCell.swift */,
-				25FE0419228870FE0071ADCF /* YeuCauCell.swift */,
+				25FE0419228870FE0071ADCF /* YeuCauPHCell.swift */,
 				25D9779D2289C9FD00272893 /* MenuDatTiecCell.swift */,
 				25D977A52289F9C800272893 /* GhiChuCell.swift */,
+				3D181CAB22A0C654009A8422 /* PhuHuynhCell.swift */,
+				3DAC421722B22D56009D293F /* YeuCauGVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,7 +172,11 @@
 		3DD87D1E2284503500354478 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3D0A0C01229B91A400FB3AFC /* User.swift */,
+				3DAC421D22B238C5009D293F /* MonAn.swift */,
+				3D0A0C01229B91A400FB3AFC /* Empl.swift */,
+				3D181CA922A0C25C009A8422 /* PhuHuynh.swift */,
+				3DAC421922B2310D009D293F /* YeuCauPH.swift */,
+				3DAC421F22B25198009D293F /* YeuCauGV.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +202,7 @@
 		3DF3DE3622844DEC00A21415 /* ChildKid */ = {
 			isa = PBXGroup;
 			children = (
+				3DB33CC722A21C5200470451 /* Constant */,
 				3D0A0BFE229B90FD00FB3AFC /* Services */,
 				3D42E436229A3C6400F577B5 /* Utils */,
 				3DD87D1E2284503500354478 /* Model */,
@@ -304,23 +337,30 @@
 			files = (
 				259172A7228883180024F965 /* LichSuYeuCauVC.swift in Sources */,
 				3DD87D2D22847CC300354478 /* NhanVienCell.swift in Sources */,
-				3DF3DE3A22844DEC00A21415 /* DanhSachNhanVienVC.swift in Sources */,
+				3DF3DE3A22844DEC00A21415 /* DanhSachUserVC.swift in Sources */,
+				3DB33CC922A21CB000470451 /* DatabaseConfig.swift in Sources */,
 				25D977A22289E9E400272893 /* ThongKeVC.swift in Sources */,
 				3DD87D22228455D800354478 /* BorderView.swift in Sources */,
 				25D977A62289F9C800272893 /* GhiChuCell.swift in Sources */,
 				3D0A0C00229B911400FB3AFC /* AuthService.swift in Sources */,
 				25FE041822886BD80071ADCF /* YeuCauDatTiecVC.swift in Sources */,
-				3D0A0C02229B91A400FB3AFC /* User.swift in Sources */,
+				3D0A0C02229B91A400FB3AFC /* Empl.swift in Sources */,
 				25D9779E2289C9FD00272893 /* MenuDatTiecCell.swift in Sources */,
 				25D977A02289D9D600272893 /* DinhGiaThucDonVC.swift in Sources */,
 				3DF3DE3822844DEC00A21415 /* AppDelegate.swift in Sources */,
-				25FE041A228870FE0071ADCF /* YeuCauCell.swift in Sources */,
+				25FE041A228870FE0071ADCF /* YeuCauPHCell.swift in Sources */,
 				25FE0414228868E60071ADCF /* BorderImageView.swift in Sources */,
 				25D9779C2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift in Sources */,
 				3DD87D2422845B1300354478 /* BorderButton.swift in Sources */,
+				3DAC421A22B2310D009D293F /* YeuCauPH.swift in Sources */,
+				3D181CAA22A0C25C009A8422 /* PhuHuynh.swift in Sources */,
 				3DD87D202284510900354478 /* LoginVC.swift in Sources */,
+				3D181CAC22A0C654009A8422 /* PhuHuynhCell.swift in Sources */,
 				3DD87D2A22846E4900354478 /* MenuVC.swift in Sources */,
 				25D977A42289F99100272893 /* GhiChuVC.swift in Sources */,
+				3DAC421E22B238C5009D293F /* MonAn.swift in Sources */,
+				3DAC422022B25198009D293F /* YeuCauGV.swift in Sources */,
+				3DAC421822B22D56009D293F /* YeuCauGVCell.swift in Sources */,
 				25FE0416228869E50071ADCF /* ThemNhanVienVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

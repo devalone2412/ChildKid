@@ -26,7 +26,7 @@ class LoginVC: UIViewController {
         super.viewWillAppear(animated)
         if Auth.auth().currentUser != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let danhSachNhanVienVC = storyboard.instantiateViewController(withIdentifier: "dsNhanVien") as! DanhSachNhanVienVC
+            let danhSachNhanVienVC = storyboard.instantiateViewController(withIdentifier: "dsNhanVien") as! DanhSachUserVC
             let nav = UINavigationController(rootViewController: danhSachNhanVienVC)
             let revealController = self.revealViewController()
             revealController?.pushFrontViewController(nav, animated: true)
@@ -57,7 +57,7 @@ class LoginVC: UIViewController {
                     self.defaults.set(email, forKey: "email")
                     self.defaults.set(password, forKey: "password")
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let danhSachNhanVienVC = storyboard.instantiateViewController(withIdentifier: "dsNhanVien") as! DanhSachNhanVienVC
+                    let danhSachNhanVienVC = storyboard.instantiateViewController(withIdentifier: "dsNhanVien") as! DanhSachUserVC
                     let nav = UINavigationController(rootViewController: danhSachNhanVienVC)
                     let revealController = self.revealViewController()
                     revealController?.pushFrontViewController(nav, animated: true)

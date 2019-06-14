@@ -16,7 +16,7 @@ class GhiChuCell: UITableViewCell {
     @IBOutlet weak var ghiChu: UILabel!
     
     func configure(image: UIImage = UIImage(named: "user-default")!, tenTre: String, lop: String, ghiChu: String) {
-        self.anhTre.image = image
+        self.anhTre.image = image ?? UIImage(named: "user-default")
         self.tenTre.text = tenTre
         self.lop.text = "Lớp: \(lop)"
         self.ghiChu.text = "Ghi chú: \(ghiChu)"

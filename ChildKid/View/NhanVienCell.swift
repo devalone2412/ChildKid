@@ -21,7 +21,7 @@ class NhanVienCell: UITableViewCell {
     }
     
     func configure(image: UIImage = UIImage(named: "user-default")!, name: String, chucVu: String, quyen: String) {
-        self.imageNhanVien.image = image
+        self.imageNhanVien.image = image ?? UIImage(named: "user-default")
         self.nameNhanVien.text = "Tên nhân viên: \(name)"
         self.chucVuNhanVien.text = "Chức vụ: \(chucVu)"
         self.quyenNhanVien.text = "Quyền: \(quyen)"

@@ -18,12 +18,12 @@
 		25FE0416228869E50071ADCF /* ThemNhanVienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE0415228869E50071ADCF /* ThemNhanVienVC.swift */; };
 		25FE041822886BD80071ADCF /* YeuCauDatTiecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE041722886BD80071ADCF /* YeuCauDatTiecVC.swift */; };
 		25FE041A228870FE0071ADCF /* YeuCauPHCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE0419228870FE0071ADCF /* YeuCauPHCell.swift */; };
-		3D0A0BFD229B848D00FB3AFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A0BFC229B848C00FB3AFC /* GoogleService-Info.plist */; };
 		3D0A0C00229B911400FB3AFC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A0BFF229B911400FB3AFC /* AuthService.swift */; };
 		3D0A0C02229B91A400FB3AFC /* Empl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A0C01229B91A400FB3AFC /* Empl.swift */; };
 		3D181CAA22A0C25C009A8422 /* PhuHuynh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D181CA922A0C25C009A8422 /* PhuHuynh.swift */; };
 		3D181CAC22A0C654009A8422 /* PhuHuynhCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D181CAB22A0C654009A8422 /* PhuHuynhCell.swift */; };
 		3D2C4E1822A3B36D00AF6D57 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2C4E1722A3B36D00AF6D57 /* iOSDropDown.framework */; };
+		3D5BB47F22BCC4F3001422E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D5BB47E22BCC4F2001422E5 /* GoogleService-Info.plist */; };
 		3DAC421822B22D56009D293F /* YeuCauGVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC421722B22D56009D293F /* YeuCauGVCell.swift */; };
 		3DAC421A22B2310D009D293F /* YeuCauPH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC421922B2310D009D293F /* YeuCauPH.swift */; };
 		3DAC421E22B238C5009D293F /* MonAn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC421D22B238C5009D293F /* MonAn.swift */; };
@@ -54,12 +54,12 @@
 		25FE0415228869E50071ADCF /* ThemNhanVienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemNhanVienVC.swift; sourceTree = "<group>"; };
 		25FE041722886BD80071ADCF /* YeuCauDatTiecVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuCauDatTiecVC.swift; sourceTree = "<group>"; };
 		25FE0419228870FE0071ADCF /* YeuCauPHCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuCauPHCell.swift; sourceTree = "<group>"; };
-		3D0A0BFC229B848C00FB3AFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D0A0BFF229B911400FB3AFC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3D0A0C01229B91A400FB3AFC /* Empl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Empl.swift; path = ChildKid/Services/Empl.swift; sourceTree = SOURCE_ROOT; };
 		3D181CA922A0C25C009A8422 /* PhuHuynh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhuHuynh.swift; path = ChildKid/PhuHuynh.swift; sourceTree = SOURCE_ROOT; };
 		3D181CAB22A0C654009A8422 /* PhuHuynhCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhuHuynhCell.swift; sourceTree = "<group>"; };
 		3D2C4E1722A3B36D00AF6D57 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D5BB47E22BCC4F2001422E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3DAC421722B22D56009D293F /* YeuCauGVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuCauGVCell.swift; sourceTree = "<group>"; };
 		3DAC421922B2310D009D293F /* YeuCauPH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YeuCauPH.swift; path = ChildKid/View/YeuCauPH.swift; sourceTree = SOURCE_ROOT; };
 		3DAC421D22B238C5009D293F /* MonAn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonAn.swift; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 				3DF3DE3E22844DEE00A21415 /* Assets.xcassets */,
 				3DF3DE4022844DEE00A21415 /* LaunchScreen.storyboard */,
 				3DF3DE4322844DEE00A21415 /* Info.plist */,
-				3D0A0BFC229B848C00FB3AFC /* GoogleService-Info.plist */,
+				3D5BB47E22BCC4F2001422E5 /* GoogleService-Info.plist */,
 			);
 			path = ChildKid;
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DF3DE4222844DEE00A21415 /* LaunchScreen.storyboard in Resources */,
-				3D0A0BFD229B848D00FB3AFC /* GoogleService-Info.plist in Resources */,
+				3D5BB47F22BCC4F3001422E5 /* GoogleService-Info.plist in Resources */,
 				3DF3DE3F22844DEE00A21415 /* Assets.xcassets in Resources */,
 				3DF3DE3D22844DEC00A21415 /* Main.storyboard in Resources */,
 			);

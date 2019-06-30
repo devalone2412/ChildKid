@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import MessageUI
 
 class YeuCauDatTiecVC: UIViewController {
     
@@ -42,6 +43,7 @@ class YeuCauDatTiecVC: UIViewController {
         switch userSC.selectedSegmentIndex {
         case 0:
             ref_DatTiec_PH.observe(.value) { (snapshot) in
+                self.listYCPH.removeAll()
                 for data in snapshot.children.allObjects as! [DataSnapshot] {
                     let ycPH = data.value as! [String: AnyObject]
                     let maMonAn = ycPH["MonAn"] as! [String]
@@ -89,7 +91,6 @@ class YeuCauDatTiecVC: UIViewController {
                                 
                                 ref_Tre.observe(.value, with: { (snapshot) in
                                     self.tenTre.removeAll()
-                                    self.listYCPH.removeAll()
                                     self.imageUrlTre.removeAll()
                                     for data in snapshot.children.allObjects as! [DataSnapshot] {
                                         let treObjs = data.value as! [String: AnyObject]
@@ -114,6 +115,7 @@ class YeuCauDatTiecVC: UIViewController {
             }
         case 1:
             ref_DatTiec_GV.observe(.value) { (snapshot) in
+                self.listYCGV.removeAll()
                 for data in snapshot.children.allObjects as! [DataSnapshot] {
                     let dtObjs = data.value as! [String: AnyObject]
                     let maMonAn = dtObjs["MonAn"] as! [String]
@@ -152,7 +154,6 @@ class YeuCauDatTiecVC: UIViewController {
                             }
                             
                             refNV.observe(.value, with: { (snapshot) in
-                                self.listYCGV.removeAll()
                                 for data in snapshot.children.allObjects as! [DataSnapshot] {
                                     let nvObjs = data.value as! [String: AnyObject]
                                     if nguoiDat == data.key {
@@ -181,6 +182,30 @@ class YeuCauDatTiecVC: UIViewController {
     
     @IBAction func userSCChange(_ sender: UISegmentedControl) {
         getDataYeuCau()
+    }
+    
+    func sendMail(message: String) {
+        let mailComposeVC = self.configMailController(message: message)
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeVC, animated: true, completion: nil)
+        } else {
+            print("Không thể gửi được")
+        }
+    }
+    
+    func configMailController(message: String) -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.setSubject("Yêu cầu đặt tiệc mới từ phụ huynh")
+        mailComposerVC.setMessageBody("<b>\(message)</b>", isHTML: true)
+        mailComposerVC.setToRecipients(["sanglt2412@gmail.com"])
+        mailComposerVC.mailComposeDelegate = self
+        return mailComposerVC
+    }
+}
+
+extension YeuCauDatTiecVC: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -247,9 +272,11 @@ extension YeuCauDatTiecVC: UITableViewDelegate, UITableViewDataSource {
             case 0:
                 ref_DatTiec_PH.child(self.listYCPH[indexPath.row].maYC).updateChildValues(["isApprove": "Y"])
                 self.getDataYeuCau()
+//                self.sendMail(message: "Yêu cầu đặt tiệc của quý phụ huynh đã được chấp nhận! Xin vui lòng thanh toán phí đặt tiệc trong vòng 3 ngày từ khi nhận được email này!")
             case 1:
                 ref_DatTiec_GV.child(self.listYCGV[indexPath.row].maYC).updateChildValues(["isApprove": "Y"])
                 self.getDataYeuCau()
+//                self.sendMail(message: "Yêu cầu đặt tiệc của bạn đã được chấp nhận!")
             default:
                 return
             }
@@ -265,9 +292,11 @@ extension YeuCauDatTiecVC: UITableViewDelegate, UITableViewDataSource {
             case 0:
                 ref_DatTiec_PH.child(self.listYCPH[indexPath.row].maYC).updateChildValues(["isApprove": "N"])
                 self.getDataYeuCau()
+//                self.sendMail(message: "Yêu cầu đặt tiệc của quý phụ huynh không được chấp nhận")
             case 1:
                 ref_DatTiec_GV.child(self.listYCGV[indexPath.row].maYC).updateChildValues(["isApprove": "N"])
                 self.getDataYeuCau()
+//                self.sendMail(message: "Yêu cầu đặt tiệc của bạn không được chấp nhận!")
             default:
                 return
             }

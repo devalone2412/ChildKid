@@ -260,12 +260,9 @@
                                             <segue destination="vQo-h3-2bV" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="MlV-t2-Eev"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wp-rf-wMW">
+                                    <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wp-rf-wMW">
                                         <rect key="frame" x="0.0" y="396" width="100" height="100"/>
                                         <state key="normal" image="thongke"/>
-                                        <connections>
-                                            <segue destination="57F-ci-lDZ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="jeS-Bh-W1t"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1572,124 +1569,6 @@
             </objects>
             <point key="canvasLocation" x="1677.5999999999999" y="-161.46926536731635"/>
         </scene>
-        <!--Thống kê-->
-        <scene sceneID="X0M-os-2sa">
-            <objects>
-                <viewController id="9yj-bw-EQL" customClass="ThongKeVC" customModule="ChildKid" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sdr-Qi-d8E">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ye-Ov-e4b" customClass="BorderView" customModule="ChildKid" customModuleProvider="target">
-                                <rect key="frame" x="16" y="132" width="343" height="449"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-mN-jP2">
-                                        <rect key="frame" x="8" y="8" width="328.5" height="49"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ubP-gN-D0B">
-                                                <rect key="frame" x="0.0" y="0.0" width="328.5" height="23.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chi phí món ăn tháng 12:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHB-JG-vQu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="23.5"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20,000,000 VNĐ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yiq-Ve-mB7">
-                                                        <rect key="frame" x="213" y="0.0" width="115.5" height="23.5"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="98" translatesAutoresizingMaskIntoConstraints="NO" id="SWk-DY-pgF">
-                                                <rect key="frame" x="0.0" y="25.5" width="328.5" height="23.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chi phí đặt tiệc:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bI-aF-Shn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="23.5"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,000,000 VNĐ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iea-oq-rhP">
-                                                        <rect key="frame" x="222" y="0.0" width="106.5" height="23.5"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="49" id="AXl-M4-6LQ"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Z58-mN-jP2" firstAttribute="top" secondItem="0Ye-Ov-e4b" secondAttribute="top" constant="8" id="XPk-NZ-AoD"/>
-                                    <constraint firstAttribute="trailing" secondItem="Z58-mN-jP2" secondAttribute="trailing" constant="6.5" id="YNX-Jd-wrb"/>
-                                    <constraint firstItem="Z58-mN-jP2" firstAttribute="leading" secondItem="0Ye-Ov-e4b" secondAttribute="leading" constant="8" id="vbm-aH-gLq"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qxn-me-y70">
-                                <rect key="frame" x="89.5" y="84" width="196.5" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn tháng:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUk-lD-aiC">
-                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="30"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1W-J7-iOZ" customClass="BorderButton" customModule="ChildKid" customModuleProvider="target">
-                                        <rect key="frame" x="106.5" y="0.0" width="90" height="30"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="pG9-8m-zrx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                        <state key="normal" title="12/2019">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="XKr-q1-rY0"/>
-                                </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gk9-ry-WTU" customClass="BorderButton" customModule="ChildKid" customModuleProvider="target">
-                                <rect key="frame" x="50.5" y="597" width="274" height="50"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="NMm-0k-g4Y"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
-                                <state key="normal" title="Xuất báo cáo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="gk9-ry-WTU" firstAttribute="top" secondItem="0Ye-Ov-e4b" secondAttribute="bottom" constant="16" id="5od-HY-8Ki"/>
-                            <constraint firstItem="0Ye-Ov-e4b" firstAttribute="leading" secondItem="kBR-yv-GWZ" secondAttribute="leading" constant="16" id="CXT-Oy-nng"/>
-                            <constraint firstItem="qxn-me-y70" firstAttribute="centerX" secondItem="sdr-Qi-d8E" secondAttribute="centerX" id="G98-Au-MTd"/>
-                            <constraint firstItem="gk9-ry-WTU" firstAttribute="width" secondItem="0Ye-Ov-e4b" secondAttribute="width" multiplier="0.8" id="M3V-mR-7PS"/>
-                            <constraint firstItem="0Ye-Ov-e4b" firstAttribute="top" secondItem="qxn-me-y70" secondAttribute="bottom" constant="18" id="VKt-n5-h7f"/>
-                            <constraint firstItem="qxn-me-y70" firstAttribute="top" secondItem="kBR-yv-GWZ" secondAttribute="top" constant="20" id="hRj-7S-6Kf"/>
-                            <constraint firstAttribute="bottom" secondItem="gk9-ry-WTU" secondAttribute="bottom" constant="20" symbolic="YES" id="lTs-Wz-cCY"/>
-                            <constraint firstItem="kBR-yv-GWZ" firstAttribute="trailing" secondItem="0Ye-Ov-e4b" secondAttribute="trailing" constant="16" id="qMV-ty-6HH"/>
-                            <constraint firstItem="gk9-ry-WTU" firstAttribute="centerX" secondItem="0Ye-Ov-e4b" secondAttribute="centerX" id="zhf-Kw-ZqM"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="kBR-yv-GWZ"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Thống kê" id="oS7-hZ-VaY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Hr-z6-giv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3560.8000000000002" y="-1658.3208395802101"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xxR-xy-VAH">
             <objects>
@@ -1707,24 +1586,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3P-sk-Nvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2620" y="-897.30134932533736"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="tUh-NA-Scp">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="57F-ci-lDZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gaJ-rT-Xys">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9yj-bw-EQL" kind="relationship" relationship="rootViewController" id="efh-al-sda"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sjx-PY-0BB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2621.5999999999999" y="-1658.3208395802101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rsG-GF-nmU">

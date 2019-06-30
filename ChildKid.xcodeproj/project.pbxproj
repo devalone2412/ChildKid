@@ -11,7 +11,6 @@
 		25D9779C2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9779B2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift */; };
 		25D9779E2289C9FD00272893 /* MenuDatTiecCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9779D2289C9FD00272893 /* MenuDatTiecCell.swift */; };
 		25D977A02289D9D600272893 /* DinhGiaThucDonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9779F2289D9D600272893 /* DinhGiaThucDonVC.swift */; };
-		25D977A22289E9E400272893 /* ThongKeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D977A12289E9E400272893 /* ThongKeVC.swift */; };
 		25D977A42289F99100272893 /* GhiChuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D977A32289F99100272893 /* GhiChuVC.swift */; };
 		25D977A62289F9C800272893 /* GhiChuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D977A52289F9C800272893 /* GhiChuCell.swift */; };
 		25FE0414228868E60071ADCF /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE0413228868E60071ADCF /* BorderImageView.swift */; };
@@ -47,7 +46,6 @@
 		25D9779B2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietYeuCauDatTiecVC.swift; sourceTree = "<group>"; };
 		25D9779D2289C9FD00272893 /* MenuDatTiecCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDatTiecCell.swift; sourceTree = "<group>"; };
 		25D9779F2289D9D600272893 /* DinhGiaThucDonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinhGiaThucDonVC.swift; sourceTree = "<group>"; };
-		25D977A12289E9E400272893 /* ThongKeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThongKeVC.swift; sourceTree = "<group>"; };
 		25D977A32289F99100272893 /* GhiChuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhiChuVC.swift; sourceTree = "<group>"; };
 		25D977A52289F9C800272893 /* GhiChuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhiChuCell.swift; sourceTree = "<group>"; };
 		25FE0413228868E60071ADCF /* BorderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				259172A6228883180024F965 /* LichSuYeuCauVC.swift */,
 				25D9779B2289C96200272893 /* ChiTietYeuCauDatTiecVC.swift */,
 				25D9779F2289D9D600272893 /* DinhGiaThucDonVC.swift */,
-				25D977A12289E9E400272893 /* ThongKeVC.swift */,
 				25D977A32289F99100272893 /* GhiChuVC.swift */,
 			);
 			path = Controller;
@@ -339,7 +336,6 @@
 				3DD87D2D22847CC300354478 /* NhanVienCell.swift in Sources */,
 				3DF3DE3A22844DEC00A21415 /* DanhSachUserVC.swift in Sources */,
 				3DB33CC922A21CB000470451 /* DatabaseConfig.swift in Sources */,
-				25D977A22289E9E400272893 /* ThongKeVC.swift in Sources */,
 				3DD87D22228455D800354478 /* BorderView.swift in Sources */,
 				25D977A62289F9C800272893 /* GhiChuCell.swift in Sources */,
 				3D0A0C00229B911400FB3AFC /* AuthService.swift in Sources */,

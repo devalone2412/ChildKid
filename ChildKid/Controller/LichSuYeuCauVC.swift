@@ -338,13 +338,13 @@ extension LichSuYeuCauVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = lichSuYeuCauTableView.dequeueReusableCell(withIdentifier: "lichSuYeuCauCell", for: indexPath) as? YeuCauPHCell
             
+            let tenPH = self.listYCPH[indexPath.row].tenPH!
+            let tenTre = self.listYCPH[indexPath.row].tenTre!
+            let ngayDat = self.listYCPH[indexPath.row].ngayDat
+            let soKPAn = self.listYCPH[indexPath.row].soKPAn
             DispatchQueue.global().async {
                 let url = URL(string: self.listYCPH[indexPath.row].imageUrl[0])!
                 let imageData = try! Data(contentsOf: url)
-                let tenPH = self.listYCPH[indexPath.row].tenPH!
-                let tenTre = self.listYCPH[indexPath.row].tenTre!
-                let ngayDat = self.listYCPH[indexPath.row].ngayDat
-                let soKPAn = self.listYCPH[indexPath.row].soKPAn
                 DispatchQueue.main.async {
                     let image = UIImage(data: imageData)!
                     cell?.configure(anhTre: image, tenPH: tenPH, tenTre: tenTre, ngayDat: ngayDat!, soKPAn: soKPAn!)
@@ -353,13 +353,14 @@ extension LichSuYeuCauVC: UITableViewDelegate, UITableViewDataSource {
             return cell ?? UITableViewCell()
         case 1:
             let cell = lichSuYeuCauTableView.dequeueReusableCell(withIdentifier: "lichSuYeuCauCellGV", for: indexPath) as! YeuCauGVCell
+            
+            let tenGV = self.listYCGV[indexPath.row].tenGV
+            let description = self.listYCGV[indexPath.row].description
+            let ngayDat = self.listYCGV[indexPath.row].ngayDat
+            let soKPAn = self.listYCGV[indexPath.row].soKPAn
             DispatchQueue.global().async {
                 let url = URL(string: self.listYCGV[indexPath.row].imageUrl)!
                 let imageData = try! Data(contentsOf: url)
-                let tenGV = self.listYCGV[indexPath.row].tenGV
-                let description = self.listYCGV[indexPath.row].description
-                let ngayDat = self.listYCGV[indexPath.row].ngayDat
-                let soKPAn = self.listYCGV[indexPath.row].soKPAn
                 DispatchQueue.main.async {
                     let image = UIImage(data: imageData)!
                     cell.configure(image: image, tenGV: tenGV!, moTa: description!, ngayDat: ngayDat!, soKPAn: soKPAn!)

@@ -34,11 +34,6 @@ class YeuCauDatTiecVC: UIViewController {
         getDataYeuCau()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        getDataYeuCau()
-    }
-    
     func getDataYeuCau() {
         switch userSC.selectedSegmentIndex {
         case 0:
@@ -56,7 +51,7 @@ class YeuCauDatTiecVC: UIViewController {
                     let maYC = data.key
                     
                     if isApprove != "Y" && isApprove != "N" {
-                        ref_MA_DT.observe(.value, with: { (snapshot) in
+                        ref_MA_DT.observeSingleEvent(of: .value, with: { (snapshot) in
                             self.listMA.removeAll()
                             for data in snapshot.children.allObjects as! [DataSnapshot] {
                                 let maObjs = data.value as! [String: AnyObject]
@@ -80,7 +75,7 @@ class YeuCauDatTiecVC: UIViewController {
                                 }
                             }
                             
-                            refPH.observe(.value, with: { (snapshot) in
+                            refPH.observeSingleEvent(of: .value, with: { (snapshot) in
                                 for data in snapshot.children.allObjects as! [DataSnapshot] {
                                     let phObjs = data.value as! [String: AnyObject]
                                     if maPH == data.key {
@@ -89,7 +84,7 @@ class YeuCauDatTiecVC: UIViewController {
                                     }
                                 }
                                 
-                                ref_Tre.observe(.value, with: { (snapshot) in
+                                ref_Tre.observeSingleEvent(of: .value, with: { (snapshot) in
                                     self.tenTre.removeAll()
                                     self.imageUrlTre.removeAll()
                                     for data in snapshot.children.allObjects as! [DataSnapshot] {
@@ -103,6 +98,7 @@ class YeuCauDatTiecVC: UIViewController {
                                     let yc_PH = YeuCauPH(maYC: maYC, imageUrl: self.imageUrlTre,monAn: self.listMA, tenTre: self.tenTre, giaTD: giaTD, tenPH: self.tenPH, soKPAn: soKPAn, ngayDat: ngayDat, isApprove: isApprove)
                                     
                                     self.listYCPH.append(yc_PH)
+                                    print(self.listYCPH.count)
                                     self.yeuCauTableView.reloadData()
                                 })
                             })
@@ -129,7 +125,7 @@ class YeuCauDatTiecVC: UIViewController {
                     
                     
                     if isApprove != "Y" && isApprove != "N" {
-                        ref_MA_DT.observe(.value, with: { (snapshot) in
+                        ref_MA_DT.observeSingleEvent(of: .value, with: { (snapshot) in
                             self.listMA.removeAll()
                             for data in snapshot.children.allObjects as! [DataSnapshot] {
                                 let maObjs = data.value as! [String: AnyObject]
@@ -153,7 +149,7 @@ class YeuCauDatTiecVC: UIViewController {
                                 }
                             }
                             
-                            refNV.observe(.value, with: { (snapshot) in
+                            refNV.observeSingleEvent(of: .value, with: { (snapshot) in
                                 for data in snapshot.children.allObjects as! [DataSnapshot] {
                                     let nvObjs = data.value as! [String: AnyObject]
                                     if nguoiDat == data.key {
@@ -225,14 +221,15 @@ extension YeuCauDatTiecVC: UITableViewDelegate, UITableViewDataSource {
         switch userSC.selectedSegmentIndex {
         case 0:
             let cell = yeuCauTableView.dequeueReusableCell(withIdentifier: "yeuCauPHCell", for: indexPath) as? YeuCauPHCell
+            let tenPH = self.listYCPH[indexPath.row].tenPH!
+            let tenTre = self.listYCPH[indexPath.row].tenTre!
+            let ngayDat = self.listYCPH[indexPath.row].ngayDat
+            let soKPAn = self.listYCPH[indexPath.row].soKPAn
             
             DispatchQueue.global().async {
                 let url = URL(string: self.listYCPH[indexPath.row].imageUrl[0])!
                 let imageData = try! Data(contentsOf: url)
-                let tenPH = self.listYCPH[indexPath.row].tenPH!
-                let tenTre = self.listYCPH[indexPath.row].tenTre!
-                let ngayDat = self.listYCPH[indexPath.row].ngayDat
-                let soKPAn = self.listYCPH[indexPath.row].soKPAn
+                
                 DispatchQueue.main.async {
                     let image = UIImage(data: imageData)!
                     cell?.configure(anhTre: image, tenPH: tenPH, tenTre: tenTre, ngayDat: ngayDat!, soKPAn: soKPAn!)
@@ -241,13 +238,14 @@ extension YeuCauDatTiecVC: UITableViewDelegate, UITableViewDataSource {
             return cell ?? UITableViewCell()
         case 1:
             let cell = yeuCauTableView.dequeueReusableCell(withIdentifier: "yeuCauGVCell", for: indexPath) as! YeuCauGVCell
+            let tenGV = self.listYCGV[indexPath.row].tenGV
+            let description = self.listYCGV[indexPath.row].description
+            let ngayDat = self.listYCGV[indexPath.row].ngayDat
+            let soKPAn = self.listYCGV[indexPath.row].soKPAn
             DispatchQueue.global().async {
                 let url = URL(string: self.listYCGV[indexPath.row].imageUrl)!
                 let imageData = try! Data(contentsOf: url)
-                let tenGV = self.listYCGV[indexPath.row].tenGV
-                let description = self.listYCGV[indexPath.row].description
-                let ngayDat = self.listYCGV[indexPath.row].ngayDat
-                let soKPAn = self.listYCGV[indexPath.row].soKPAn
+                
                 DispatchQueue.main.async {
                     let image = UIImage(data: imageData)!
                     cell.configure(image: image, tenGV: tenGV!, moTa: description!, ngayDat: ngayDat!, soKPAn: soKPAn!)
@@ -271,11 +269,13 @@ extension YeuCauDatTiecVC: UITableViewDelegate, UITableViewDataSource {
             switch self.userSC.selectedSegmentIndex {
             case 0:
                 ref_DatTiec_PH.child(self.listYCPH[indexPath.row].maYC).updateChildValues(["isApprove": "Y"])
-                self.getDataYeuCau()
+//                self.getDataYeuCau()
+                self.yeuCauTableView.reloadData()
 //                self.sendMail(message: "Yêu cầu đặt tiệc của quý phụ huynh đã được chấp nhận! Xin vui lòng thanh toán phí đặt tiệc trong vòng 3 ngày từ khi nhận được email này!")
             case 1:
                 ref_DatTiec_GV.child(self.listYCGV[indexPath.row].maYC).updateChildValues(["isApprove": "Y"])
-                self.getDataYeuCau()
+//                self.getDataYeuCau()
+                self.yeuCauTableView.reloadData()
 //                self.sendMail(message: "Yêu cầu đặt tiệc của bạn đã được chấp nhận!")
             default:
                 return
@@ -291,11 +291,13 @@ extension YeuCauDatTiecVC: UITableViewDelegate, UITableViewDataSource {
             switch self.userSC.selectedSegmentIndex {
             case 0:
                 ref_DatTiec_PH.child(self.listYCPH[indexPath.row].maYC).updateChildValues(["isApprove": "N"])
-                self.getDataYeuCau()
+//                self.getDataYeuCau()
+                self.yeuCauTableView.reloadData()
 //                self.sendMail(message: "Yêu cầu đặt tiệc của quý phụ huynh không được chấp nhận")
             case 1:
                 ref_DatTiec_GV.child(self.listYCGV[indexPath.row].maYC).updateChildValues(["isApprove": "N"])
-                self.getDataYeuCau()
+//                self.getDataYeuCau()
+                self.yeuCauTableView.reloadData()
 //                self.sendMail(message: "Yêu cầu đặt tiệc của bạn không được chấp nhận!")
             default:
                 return

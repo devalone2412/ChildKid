@@ -38,6 +38,7 @@ class LichSuYeuCauVC: UIViewController {
         if userSC.selectedSegmentIndex == 0 {
             if statusDatTiec.selectedSegmentIndex == 0 {
                 ref_DatTiec_PH.observe(.value) { (snapshot) in
+                    self.listYCPH.removeAll()
                     for data in snapshot.children.allObjects as! [DataSnapshot] {
                         let ycPH = data.value as! [String: AnyObject]
                         if ycPH["isApprove"] as! String == "Y" {
@@ -50,7 +51,7 @@ class LichSuYeuCauVC: UIViewController {
                             let soKPAn = ycPH["soKPAn"] as! String
                             let maYC = data.key
                             
-                            ref_MA_DT.observe(.value, with: { (snapshot) in
+                            ref_MA_DT.observeSingleEvent(of: .value, with: { (snapshot) in
                                 self.listMA.removeAll()
                                 for data in snapshot.children.allObjects as! [DataSnapshot] {
                                     let maObjs = data.value as! [String: AnyObject]
@@ -74,7 +75,7 @@ class LichSuYeuCauVC: UIViewController {
                                     }
                                 }
                                 
-                                refPH.observe(.value, with: { (snapshot) in
+                                refPH.observeSingleEvent(of: .value, with: { (snapshot) in
                                     for data in snapshot.children.allObjects as! [DataSnapshot] {
                                         let phObjs = data.value as! [String: AnyObject]
                                         if maPH == data.key {
@@ -83,9 +84,8 @@ class LichSuYeuCauVC: UIViewController {
                                         }
                                     }
                                     
-                                    ref_Tre.observe(.value, with: { (snapshot) in
+                                    ref_Tre.observeSingleEvent(of: .value, with: { (snapshot) in
                                         self.tenTre.removeAll()
-                                        self.listYCPH.removeAll()
                                         self.imageUrlTre.removeAll()
                                         for data in snapshot.children.allObjects as! [DataSnapshot] {
                                             let treObjs = data.value as! [String: AnyObject]
@@ -110,6 +110,7 @@ class LichSuYeuCauVC: UIViewController {
                 }
             } else {
                 ref_DatTiec_PH.observe(.value) { (snapshot) in
+                    self.listYCPH.removeAll()
                     for data in snapshot.children.allObjects as! [DataSnapshot] {
                         let ycPH = data.value as! [String: AnyObject]
                         if ycPH["isApprove"] as! String == "N" {
@@ -122,7 +123,7 @@ class LichSuYeuCauVC: UIViewController {
                             let soKPAn = ycPH["soKPAn"] as! String
                             let maYC = data.key
                             
-                            ref_MA_DT.observe(.value, with: { (snapshot) in
+                            ref_MA_DT.observeSingleEvent(of: .value, with: { (snapshot) in
                                 self.listMA.removeAll()
                                 for data in snapshot.children.allObjects as! [DataSnapshot] {
                                     let maObjs = data.value as! [String: AnyObject]
@@ -146,7 +147,7 @@ class LichSuYeuCauVC: UIViewController {
                                     }
                                 }
                                 
-                                refPH.observe(.value, with: { (snapshot) in
+                                refPH.observeSingleEvent(of: .value, with: { (snapshot) in
                                     for data in snapshot.children.allObjects as! [DataSnapshot] {
                                         let phObjs = data.value as! [String: AnyObject]
                                         if maPH == data.key {
@@ -155,9 +156,8 @@ class LichSuYeuCauVC: UIViewController {
                                         }
                                     }
                                     
-                                    ref_Tre.observe(.value, with: { (snapshot) in
+                                    ref_Tre.observeSingleEvent(of: .value, with: { (snapshot) in
                                         self.tenTre.removeAll()
-                                        self.listYCPH.removeAll()
                                         self.imageUrlTre.removeAll()
                                         for data in snapshot.children.allObjects as! [DataSnapshot] {
                                             let treObjs = data.value as! [String: AnyObject]
@@ -184,6 +184,7 @@ class LichSuYeuCauVC: UIViewController {
         } else {
             if statusDatTiec.selectedSegmentIndex == 0 {
                 ref_DatTiec_GV.observe(.value) { (snapshot) in
+                    self.listYCGV.removeAll()
                     for data in snapshot.children.allObjects as! [DataSnapshot] {
                         let dtObjs = data.value as! [String: AnyObject]
                         if dtObjs["isApprove"] as! String == "Y" {
@@ -196,7 +197,7 @@ class LichSuYeuCauVC: UIViewController {
                             let soKPAn = dtObjs["soKPAn"] as! String
                             let maYC = data.key
                             
-                            ref_MA_DT.observe(.value, with: { (snapshot) in
+                            ref_MA_DT.observeSingleEvent(of: .value, with: { (snapshot) in
                                 self.listMA.removeAll()
                                 for data in snapshot.children.allObjects as! [DataSnapshot] {
                                     let maObjs = data.value as! [String: AnyObject]
@@ -220,8 +221,7 @@ class LichSuYeuCauVC: UIViewController {
                                     }
                                 }
                                 
-                                refNV.observe(.value, with: { (snapshot) in
-                                    self.listYCGV.removeAll()
+                                refNV.observeSingleEvent(of: .value, with: { (snapshot) in
                                     for data in snapshot.children.allObjects as! [DataSnapshot] {
                                         let nvObjs = data.value as! [String: AnyObject]
                                         if nguoiDat == data.key {
@@ -245,6 +245,7 @@ class LichSuYeuCauVC: UIViewController {
                 }
             } else {
                 ref_DatTiec_GV.observe(.value) { (snapshot) in
+                    self.listYCGV.removeAll()
                     for data in snapshot.children.allObjects as! [DataSnapshot] {
                         let dtObjs = data.value as! [String: AnyObject]
                         if dtObjs["isApprove"] as! String == "N" {
@@ -257,7 +258,7 @@ class LichSuYeuCauVC: UIViewController {
                             let soKPAn = dtObjs["soKPAn"] as! String
                             let maYC = data.key
                             
-                            ref_MA_DT.observe(.value, with: { (snapshot) in
+                            ref_MA_DT.observeSingleEvent(of: .value, with: { (snapshot) in
                                 self.listMA.removeAll()
                                 for data in snapshot.children.allObjects as! [DataSnapshot] {
                                     let maObjs = data.value as! [String: AnyObject]
@@ -281,8 +282,7 @@ class LichSuYeuCauVC: UIViewController {
                                     }
                                 }
                                 
-                                refNV.observe(.value, with: { (snapshot) in
-                                    self.listYCGV.removeAll()
+                                refNV.observeSingleEvent(of: .value, with: { (snapshot) in
                                     for data in snapshot.children.allObjects as! [DataSnapshot] {
                                         let nvObjs = data.value as! [String: AnyObject]
                                         if nguoiDat == data.key {
@@ -383,10 +383,12 @@ extension LichSuYeuCauVC: UITableViewDelegate, UITableViewDataSource {
         let xoa = UIContextualAction(style: .destructive, title: "Xoá") { (action, view, completion) in
             if self.userSC.selectedSegmentIndex == 0 {
                 ref_DatTiec_PH.child(self.listYCPH[indexPath.row].maYC).removeValue()
-                self.getData()
+//                self.getData()
+                self.lichSuYeuCauTableView.reloadData()
             } else {
                 ref_DatTiec_GV.child(self.listYCGV[indexPath.row].maYC).removeValue()
-                self.getData()
+//                self.getData()
+                self.lichSuYeuCauTableView.reloadData()
             }
             completion(true)
         }
@@ -398,10 +400,12 @@ extension LichSuYeuCauVC: UITableViewDelegate, UITableViewDataSource {
         let getBack = UIContextualAction(style: .normal, title: "Khôi phục") { (action, view, completion) in
             if self.userSC.selectedSegmentIndex == 0 {
                 ref_DatTiec_PH.child(self.listYCPH[indexPath.row].maYC).updateChildValues(["isApprove": ""])
-                self.getData()
+//                self.getData()
+                self.lichSuYeuCauTableView.reloadData()
             } else {
                 ref_DatTiec_GV.child(self.listYCGV[indexPath.row].maYC).updateChildValues(["isApprove": ""])
-                self.getData()
+//                self.getData()
+                self.lichSuYeuCauTableView.reloadData()
             }
             completion(true)
         }
